@@ -22,5 +22,4 @@ public class ContextMenuPage {
     public void alert_clickToAccept(){
         driver.switchTo().alert().accept();
     }
-
 }

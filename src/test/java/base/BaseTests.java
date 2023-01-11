@@ -1,6 +1,7 @@
 package base;
 
 import com.google.common.io.Files;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,11 +22,12 @@ public class BaseTests {
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
         driver.register(new EventReporter());
         goHome();
-        setCookie();
+        //setCookie();
     }
 
     @BeforeMethod
