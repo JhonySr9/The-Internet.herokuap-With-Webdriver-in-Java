@@ -39,6 +39,13 @@
         <version>5.3.1</version>
         <scope>test</scope>
     </dependency>
+    <dependency>
+        <!-- https://mvnrepository.com/artifact/com.applitools/eyes-selenium-java3 -->
+        <groupId>com.applitools</groupId>
+        <artifactId>eyes-selenium-java3</artifactId>
+        <version>3.213.0</version>
+    </dependency>
+
 </dependencies>
 
 </project>

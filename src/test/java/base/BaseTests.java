@@ -13,21 +13,21 @@ import utils.EventReporter;
 import utils.WindowManager;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
 
 public class BaseTests {
 
-    private EventFiringWebDriver driver;
+    private ChromeDriver driver;
     protected HomePage homePage;
 
     @BeforeClass
     public void setUp() {
-        //System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
-        driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
-        driver.register(new EventReporter());
+        driver = new ChromeDriver();
         goHome();
-        //setCookie();
+
     }
 
     @BeforeMethod
